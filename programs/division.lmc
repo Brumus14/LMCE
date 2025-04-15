@@ -1,0 +1,24 @@
+         INP          // A
+         STA a
+         INP          // B
+         STA b
+         LDA zero
+         STA quotient
+loop     LDA a
+         SUB b
+         BRP continue
+         BRA end
+continue STA a
+         LDA quotient
+         ADD one
+         STA quotient
+         BRA loop
+end      LDA quotient
+         OUT
+         HLT
+
+a        DAT 0
+b        DAT 0
+quotient DAT 0
+one      DAT 1
+zero     DAT 0

@@ -1,0 +1,10 @@
+      LDA count
+loop  OUT
+      SUB one
+      STA count
+      BRZ end
+      BRA loop
+end   HLT
+
+count DAT 3
+one   DAT 1

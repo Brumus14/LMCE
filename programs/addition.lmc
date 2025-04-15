@@ -1,0 +1,11 @@
+       INP
+       STA first
+       INP
+       STA second
+       LDA first
+       ADD second
+       OUT
+
+// memory locations for numbers
+first  DAT
+second DAT
